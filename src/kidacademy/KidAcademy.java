@@ -33,7 +33,7 @@ public class KidAcademy {
         actorOne.setDescription("Welcome to the Kid Academy Game!");
         actorOne.setCoordinates("10|10");
         actorOne.setCurrentScore(10);
-        actorOne.setPlayer("Billy");
+        actorOne.setPlayer("Tom");
         
         String actorInfo = actorOne.toString();
         System.out.println(actorInfo);
