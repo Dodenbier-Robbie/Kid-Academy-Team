@@ -7,7 +7,7 @@ package kidacademy.model;
 
 /**
  *
- * @author Mann
+ * @author aolse
  */
 public class Player {
     
