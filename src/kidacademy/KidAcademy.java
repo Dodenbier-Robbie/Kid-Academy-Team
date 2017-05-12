@@ -7,6 +7,8 @@ package kidacademy;
 
 import kidacademy.model.Actor;
 import kidacademy.model.Game;
+import kidacademy.model.Location;
+import kidacademy.model.RegularSceneType;
 
 /**
  *
@@ -34,6 +36,31 @@ public class KidAcademy {
         
         String actorInfo = actorOne.toString();
         System.out.println(actorInfo);
+        
+        //Location Class Testing
+        
+        Location locationOne = new Location();
+        
+        locationOne.setCompleted(true);
+        locationOne.setCoordinates("1,1");
+        
+        String locationInfo = locationOne.toString();
+        System.out.println(locationInfo);
+        
+        // RegularSceneType Class Testing
+        
+        RegularSceneType rstOne = new RegularSceneType();
+        
+        rstOne.setLocation("12");
+        rstOne.setSubject("Science");
+        rstOne.setType("Location");
+        rstOne.setName("Biology Room");
+        rstOne.setDescription("This is Biology Room 12. In here you will be "
+                + "asked questions about life sciences.");
+        
+        String rstInfo = rstOne.toString();
+        System.out.println(rstInfo);
+        
     }
     
 }
