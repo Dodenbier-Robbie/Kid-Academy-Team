@@ -8,6 +8,7 @@ package kidacademy;
 import kidacademy.model.Actor;
 import kidacademy.model.Game;
 import kidacademy.model.Location;
+import kidacademy.model.Player;
 import kidacademy.model.RegularSceneType;
 
 /**
@@ -36,6 +37,16 @@ public class KidAcademy {
         
         String actorInfo = actorOne.toString();
         System.out.println(actorInfo);
+        
+        // Player
+        Player playerOne = new Player();
+        playerOne.setAge(10);
+        playerOne.setBestScore(200);
+        playerOne.setGender("M");
+        playerOne.setName("Tom");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo  );
         
         //Location Class Testing
         
