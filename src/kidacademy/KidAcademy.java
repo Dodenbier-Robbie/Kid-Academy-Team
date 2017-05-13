@@ -8,7 +8,9 @@ package kidacademy;
 import kidacademy.model.Actor;
 import kidacademy.model.Game;
 import kidacademy.model.Location;
+import kidacademy.model.Map;
 import kidacademy.model.Player;
+import kidacademy.model.Question;
 import kidacademy.model.RegularSceneType;
 
 /**
@@ -72,6 +74,28 @@ public class KidAcademy {
         String rstInfo = rstOne.toString();
         System.out.println(rstInfo);
         
+       // Map class
+       
+       Map mapOne = new Map ();
+       
+       mapOne.setDescription("This is Map number one");
+       mapOne.setDimension(12);
+       
+       String mapInfo = mapOne.toString();
+       System.out.println(mapInfo);
+       
+      // Questions class
+      
+      Question questionOne = new Question();
+      
+      questionOne.setQuestion("do you like math");
+      questionOne.setAnswerCorrect(" answer is correct");
+      questionOne.setAnswerPotential("Not good");
+      questionOne.setSubject("This is the subject");
+      questionOne.setScore(12.00);
+      
+      String questionInfo = questionOne.toString();
+      System.out.println(questionInfo);
     }
     
 }
