@@ -153,7 +153,6 @@ public class MathControlTest {
         MathControl instance = new MathControl();
         double expResult = 14.14213562;
         double result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
-        double distance = (x2 - x1) + (y2 - y1);
         assertEquals(expResult, result, 0.00000001);
         System.out.println("Success");
         
