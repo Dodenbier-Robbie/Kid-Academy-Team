@@ -61,6 +61,66 @@ public class MathControlTest {
         result = instance.calcVolumeTrianglePrism(base, length, height);
         assertEquals(expResult, result,0);
         System.out.println("Success");
+        
+        //Test4
+        System.out.println("calcVolumeTrianglePrism Test 4");
+        base = 10.0;
+        length = 0.0;
+        height = -10.0;
+        expResult = -1;
+        result = instance.calcVolumeTrianglePrism(base, length, height);
+        assertEquals(expResult, result,0);
+        System.out.println("Success");
+                
+        //Test5
+        System.out.println("calcVolumeTrianglePrism Test 5");
+        base = 0.0;
+        length = 10.0;
+        height = 10.0;
+        expResult = -1;
+        result = instance.calcVolumeTrianglePrism(base, length, height);
+        assertEquals(expResult, result,0);
+        System.out.println("Success");
+                        
+        //Test6
+        System.out.println("calcVolumeTrianglePrism Test 6");
+        base = 10.0;
+        length = 0.0;
+        height = 10.0;
+        expResult = -1;
+        result = instance.calcVolumeTrianglePrism(base, length, height);
+        assertEquals(expResult, result,0);
+        System.out.println("Success");
+                                
+        //Test7
+        System.out.println("calcVolumeTrianglePrism Test 7");
+        base = 10.0;
+        length = 10.0;
+        height = 0.0;
+        expResult = -1;
+        result = instance.calcVolumeTrianglePrism(base, length, height);
+        assertEquals(expResult, result,0);
+        System.out.println("Success");
+        
+        //Test8
+        System.out.println("calcVolumeTrianglePrism Test 8");
+        base = 1.0;
+        length = 1.0;
+        height = 1.0;
+        expResult = .5;
+        result = instance.calcVolumeTrianglePrism(base, length, height);
+        assertEquals(expResult, result,0);
+        System.out.println("Success");
+        
+        //Test9
+        System.out.println("calcVolumeTrianglePrism Test 9");
+        base = 100.0;
+        length = 100.0;
+        height = 100.0;
+        expResult = 500000;
+        result = instance.calcVolumeTrianglePrism(base, length, height);
+        assertEquals(expResult, result,0);
+        System.out.println("Success");
     }
     /**
      * Test of calcAreaTrapezoid method, of class MathControl.
