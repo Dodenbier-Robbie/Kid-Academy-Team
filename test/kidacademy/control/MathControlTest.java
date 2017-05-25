@@ -6,9 +6,9 @@
 package kidacademy.control;
 
 import org.junit.After;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -127,16 +127,16 @@ public class MathControlTest {
      */
     @Test
     public void testCalcAreaTrapezoid() {
-        System.out.println("calcAreaTrapezoid");
+        //Test 1
+        System.out.println("calcAreaTrapezoid Test 1");
         double base1 = 0.0;
         double base2 = 0.0;
         double height = 0.0;
         MathControl instance = new MathControl();
         double expResult = 0.0;
         double result = instance.calcAreaTrapezoid(base1, base2, height);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result, 0);
+
     }
 
     /**
@@ -144,17 +144,27 @@ public class MathControlTest {
      */
     @Test
     public void testCalcDistanceTwoPoints() {
-        System.out.println("calcDistanceTwoPoints");
-        double x1 = 0.0;
-        double x2 = 0.0;
-        double y1 = 0.0;
-        double y2 = 0.0;
+        //Test 1
+        System.out.println("calcDistanceTwoPoints Test 1");
+        double x1 = 10.0;
+        double x2 = 20.0;
+        double y1 = 5.0;
+        double y2 = 15.0;
         MathControl instance = new MathControl();
-        double expResult = 0.0;
+        double expResult = 14.14213562;
         double result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        double distance = (x2 - x1) + (y2 - y1);
+        assertEquals(expResult, result, 0.00000001);
+        System.out.println("Success");
+        
+        //Test 2
+        System.out.println("calcDistanceTwoPoints Test 2");
+        x1 = 10.0;
+        x2 = 10.0;
+        y1 = 10.0;
+        y2 = 10.0;
+        expResult = -1;
+        result = instance.calcDistanceTwoPoints(x1, x2, y1, y2);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
     }
-    
-}
