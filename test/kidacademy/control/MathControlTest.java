@@ -127,15 +127,96 @@ public class MathControlTest {
      */
     @Test
     public void testCalcAreaTrapezoid() {
-        //Test 1
+        //Test 1 (Rudy)
         System.out.println("calcAreaTrapezoid Test 1");
-        double base1 = 0.0;
-        double base2 = 0.0;
-        double height = 0.0;
+        double base1 = 10.0;
+        double base2 = 10.0;
+        double height = 5.0;
         MathControl instance = new MathControl();
-        double expResult = 0.0;
+        double expResult = 50.0;
         double result = instance.calcAreaTrapezoid(base1, base2, height);
         assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 2 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = -10.0;
+         base2 = 10.0;
+         height = 5.0;
+         expResult = -1;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 3 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 10.0;
+         base2 = -10.0;
+         height = 5.0;
+         expResult = -1;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");\
+        
+        //Test 4 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 10.0;
+         base2 = 10.0;
+         height = -5.0;
+         expResult = -1;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 5 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 0.0;
+         base2 = 10.0;
+         height = 5.0;
+         expResult = -1;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 6 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 10.0;
+         base2 = 0.0;
+         height = 5.0;
+         expResult = -1;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 7 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 10.0;
+         base2 = 10.0;
+         height = 0.0;
+         expResult = -1;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 8 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 1.0;
+         base2 = 1.0;
+         height = 1.0;
+         expResult = 1.0;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
+        
+        //Test 9 (Rudy)
+        System.out.println("calcAreaTrapezoid Test 1");
+         base1 = 100.0;
+         base2 = 100.0;
+         height = 100.0;
+         expResult = 10000;
+        result = instance.calcAreaTrapezoid(base1, base2, height);
+        assertEquals(expResult, result, 0);
+        System.out.println("Success");
 
     }
 
