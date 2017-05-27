@@ -139,7 +139,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 2 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 2");
          base1 = -10.0;
          base2 = 10.0;
          height = 5.0;
@@ -149,7 +149,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 3 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 3");
          base1 = 10.0;
          base2 = -10.0;
          height = 5.0;
@@ -159,7 +159,7 @@ public class MathControlTest {
         System.out.println("Success");\
         
         //Test 4 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 4");
          base1 = 10.0;
          base2 = 10.0;
          height = -5.0;
@@ -169,7 +169,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 5 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 5");
          base1 = 0.0;
          base2 = 10.0;
          height = 5.0;
@@ -179,7 +179,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 6 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 6");
          base1 = 10.0;
          base2 = 0.0;
          height = 5.0;
@@ -189,7 +189,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 7 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 7");
          base1 = 10.0;
          base2 = 10.0;
          height = 0.0;
@@ -199,7 +199,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 8 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 8");
          base1 = 1.0;
          base2 = 1.0;
          height = 1.0;
@@ -209,7 +209,7 @@ public class MathControlTest {
         System.out.println("Success");
         
         //Test 9 (Rudy)
-        System.out.println("calcAreaTrapezoid Test 1");
+        System.out.println("calcAreaTrapezoid Test 9");
          base1 = 100.0;
          base2 = 100.0;
          height = 100.0;
