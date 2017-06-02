@@ -5,6 +5,8 @@
  */
 package kidacademy;
 
+import kidacademy.model.Game;
+import kidacademy.model.Player;
 import kidacademy.view.StartProgramView;
 
 /**
@@ -12,14 +14,37 @@ import kidacademy.view.StartProgramView;
  * @author aolse
  */
 public class KidAcademy {
-
-    /**
+    
+    private static Game currentGame = null;
+    private static Player player = null;
+    
+     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
       
+        
+        
       StartProgramView startProgramView = new StartProgramView ();
       startProgramView.displayStartProgramView();
     }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        KidAcademy.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        KidAcademy.player = player;
+    }
+
+    
     
 }
