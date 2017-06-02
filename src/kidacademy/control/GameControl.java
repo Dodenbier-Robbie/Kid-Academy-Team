@@ -5,6 +5,7 @@
  */
 package kidacademy.control;
 
+import kidacademy.KidAcademy;
 import kidacademy.model.Player;
 
 /**
@@ -14,7 +15,17 @@ import kidacademy.model.Player;
 public class GameControl {
 
     public static Player createPlayer(String playersName) {
-        System.out.println("\n*** createPlayer() called ***");
-        return new Player(); 
+
+        if (playersName == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(playersName);
+        
+        KidAcademy.setPlayer(player); // save the player
+        
+        return player;
     }
+
 }
