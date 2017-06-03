@@ -6,31 +6,27 @@
 package kidacademy.view;
 
 import java.util.Scanner;
-import kidacademy.KidAcademy;
-import kidacademy.control.GameControl;
 
 /**
  *
  * @author Mann
  */
-public class MainMenuView {
-    private String menu;
+public class HelpMenuView {
+  private String menu;
     
-    public MainMenuView(){
+    public HelpMenuView(){
         this.menu = "\n"
                 + "\n-----------------------------------------"
-                + "\n |Main Menu                             |"
+                + "\n |Help Menu                             |"
                 + "\n-----------------------------------------"
-                + "\n1 - Go to school"
-                + "\n2 - Continue a saved game"
-                + "\n3 - Help menu"
-                + "\n4 - Tutorial"
-                + "\n5 - High score menu"
+                + "\n1 - What is the objective of the game?"
+                + "\n2 - How do I play the game?"
+                + "\n3 - Where can I provide feedback?"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------";
-    }
+    }  
     
-    void displayMainMenuView() {
+    void displayHelpMenuView() {
  
             boolean done = false; // set flag to not done
             do {
@@ -66,25 +62,21 @@ public class MainMenuView {
         
         return choice; //return the value entered
     }
-
+               // + "\n1 - What is the objective of the game?"
+               //+ "\n2 - How do I play the game?"
+               //+ "\n3 - Where can I provide feedback?"
     private boolean doAction(String choice) {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "1": //create and start a new game
-                this.startNewGame();
+            case "1": //display objective of the game
+                this.displayObjective();
                 break;
-            case "2": //get and start an existing game
-                this.startExistingGame();
+            case "2": //display rules of the game
+                this.displayRules();
                 break;
-            case "3": //display the help menu
-                this.displayHelpMenu();
-                break;
-            case "4": // save the current game
-                this.saveGame();
-                break;
-            case "5": //get and show high score
-                this.displayHighScore();
+            case "3": //display the feedback address
+                this.displayFeedback();
                 break;
             default: //get and start an existing game
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -94,30 +86,15 @@ public class MainMenuView {
         return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame(KidAcademy.getPlayer());
-        
-        // display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void displayObjective() {
+        System.out.println("*** displayObjective function called ***");
     }
 
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+    private void displayRules() {
+        System.out.println("*** displayRules function called ***");
     }
 
-    private void displayHelpMenu() {   
-        // display the help menu
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+    private void displayFeedback() {
+        System.out.println("*** displayFeedback function called ***");
     }
-
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
-
-    private void displayHighScore() {
-        System.out.println("*** displayHighScore function called ***");
-    }
-    
 }
