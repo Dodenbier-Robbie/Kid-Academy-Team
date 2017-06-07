@@ -99,7 +99,9 @@ class MathBuildingView {
     }
 
     private void displayGeometryClassRoom() {
-        System.out.println("\n*** displayGeometryClassRoom() stub function called ***");
+        // Redirect to Geometry Class Room
+        GeometryClassRoomView geometryClassRoom = new GeometryClassRoomView();
+        geometryClassRoom.displayGeometryQuestion();
     }
 
     private void displayAlgebraClassRoom() {

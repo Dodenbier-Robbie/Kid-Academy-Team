@@ -73,8 +73,6 @@ public class MathControl {
             double distance = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2));
 
             //Return outputs
-            return distance;
-
-        
+            return distance;   
     }
 }
