@@ -117,6 +117,6 @@ public class LocationMenuView {
     private void displayGraduationCeremony() {
         // display the Graduation Ceremony menu
         GraduationCeremonyView graduationCeremonyMenu = new GraduationCeremonyView();
-        graduationCeremonyMenu.displayGraduationCeremonyView();
+        graduationCeremonyMenu.displayScienceBuildingView();
     }
 }

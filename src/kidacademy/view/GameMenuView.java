@@ -12,7 +12,7 @@ package kidacademy.view;
 class GameMenuView {
 
     void displayMenu() {
-        System.out.println("\n*** displayMenu stub function called ***");
+        System.out.println("\n*** displyaMenu stub function called ***");
     }
     
 }
