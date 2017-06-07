@@ -19,7 +19,7 @@ class GeometryClassRoomView {
                 + "\n-----------------------------------------"
                 + "\n |Geometry Class Room                   |"
                 + "\n-----------------------------------------"
-                + "\nPlease answer the following question or select Q to quit"
+                + "\nPlease answer the following question"
                 + "\nAnswer successfully for 35 points");
     }
     void displayGeometryQuestion() {
