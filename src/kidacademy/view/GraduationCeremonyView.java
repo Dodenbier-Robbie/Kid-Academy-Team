@@ -17,10 +17,11 @@ class GraduationCeremonyView {
     public GraduationCeremonyView() {
         this.menu = "\n"
                 + "\n-----------------------------------------"
-                + "\n |Graduation Ceremony Menu                 |"
+                + "\n |Graduation Ceremony Menu              |"
                 + "\n-----------------------------------------"
                 + "\n1 - Continue to graduation"
-                + "\nQ - Quit";
+                + "\nQ - Quit"
+                + "\n-----------------------------------------";
     }
     void displayGraduationCeremonyView() {
     

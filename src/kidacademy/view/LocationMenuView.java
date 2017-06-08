@@ -24,7 +24,8 @@ public class LocationMenuView {
                 + "\n3 - Math building"
                 + "\n4 - History building"
                 + "\n5 - Graduation Ceremony"
-                + "\nQ - Quit";
+                + "\nQ - Quit"
+                + "\n-----------------------------------------";
     }
     void displayLocationMenuView() {
  

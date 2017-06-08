@@ -25,7 +25,8 @@ class HistoryBuildingView {
                 + "\n4 - Time Periods & Eras"
                 + "\n5 - Wars"
                 + "\nF - Final Exam"
-                + "\nQ - Quit";
+                + "\nQ - Quit"
+                + "\n-----------------------------------------";
     }
     void displayHistoryBuildingView() {
 

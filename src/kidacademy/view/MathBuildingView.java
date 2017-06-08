@@ -17,7 +17,7 @@ class MathBuildingView {
     public MathBuildingView() {
         this.menu = "\n"
                 + "\n-----------------------------------------"
-                + "\n |Math Building Menu                 |"
+                + "\n |Math Building Menu                    |"
                 + "\n-----------------------------------------"
                 + "\n1 - Arithmetric"
                 + "\n2 - Geometry"
@@ -25,7 +25,8 @@ class MathBuildingView {
                 + "\n4 - Trigonometry"
                 + "\n5 - Calculus"
                 + "\nF - Final Exam"
-                + "\nQ - Quit";
+                + "\nQ - Quit"
+                + "\n-----------------------------------------";
     }
     void displayMathBuildingView() {
 

@@ -25,7 +25,8 @@ public class ScienceBuildingView {
                 + "\n4 - Chemistry"
                 + "\n5 - Dinosaurs"
                 + "\nF - Final Exam"
-                + "\nQ - Quit";
+                + "\nQ - Quit"
+                + "\n-----------------------------------------";
     }
     void displayScienceBuildingView() {
         
