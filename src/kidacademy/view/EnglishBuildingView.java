@@ -25,7 +25,7 @@ class EnglishBuildingView {
                 + "\n4 - Conjuctions"
                 + "\n5 - Punctuation"
                 + "\nF - Final Exam"
-                + "\nQ - Quit122";
+                + "\nQ - Quit";
     }
     void displayEnglishBuildingView() {
  
