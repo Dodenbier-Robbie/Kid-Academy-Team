@@ -20,10 +20,11 @@ class GeometryClassRoomView {
                 + "\n |Geometry Class Room                   |"
                 + "\n-----------------------------------------"
                 + "\nPlease answer the following question"
-                + "\nAnswer successfully for 35 points");
+                + "\nAnswer successfully for 35 points"
+                + "\n-----------------------------------------");
     }
     void displayGeometryQuestion() {
-        System.out.println("\nCalculate the distance between two points."
+        System.out.println("\n\nCalculate the distance between two points."
                 + "\nEnter a value for each of the required inputs as well"
                 + "\nas your calculated answer");
     }

@@ -5,12 +5,28 @@
  */
 package kidacademy.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author rdodenbier
  */
 class MathBuildingView {
-
+    private String menu;
+    
+    public MathBuildingView() {
+        this.menu = "\n"
+                + "\n-----------------------------------------"
+                + "\n |Math Building Menu                 |"
+                + "\n-----------------------------------------"
+                + "\n1 - Arithmetric"
+                + "\n2 - Geometry"
+                + "\n3 - Algebra"
+                + "\n4 - Trigonometry"
+                + "\n5 - Calculus"
+                + "\nF - Final Exam"
+                + "\nQ - Quit";
+    }
     void displayMathBuildingView() {
 
         boolean done = false; // set flag to not done
