@@ -30,7 +30,7 @@ public class StartProgramView {
         System.out.println(    
         "\n*************************************************"
         +"\n                                               *"
-        +"\n This is the game description                         *"
+        +"\n This is the game description                  *"
         +"\n************************************************"
         );
     }
