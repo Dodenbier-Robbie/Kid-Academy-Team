@@ -156,7 +156,7 @@ public class MathControlTest {
          expResult = -1;
         result = instance.calcAreaTrapezoid(base1, base2, height);
         assertEquals(expResult, result, 0);
-        System.out.println("Success");\
+        System.out.println("Success");
         
         //Test 4 (Rudy)
         System.out.println("calcAreaTrapezoid Test 4");
@@ -248,3 +248,4 @@ public class MathControlTest {
         assertEquals(expResult, result, 0);
         System.out.println("Success");
     }
+}

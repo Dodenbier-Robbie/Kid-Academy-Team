@@ -27,124 +27,62 @@ class GeometryClassRoomView {
         System.out.println("\n\nCalculate the distance between two points."
                 + "\nEnter a value for each of the required inputs as well"
                 + "\nas your calculated answer");
+        
+        this.getInputs(0, 0, 0, 0, 0);
     }
     
-    private double getX1Input() {
+    private void getInputs(double x1, double x2, double y1, double y2, double calcDistance) {
         
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        double x1 = 0.0; //value to be returned
-        boolean valid = false; //initalize to not valid
+        Scanner keyboard = new Scanner(System.in);
+        boolean valid = false;
         
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\nx1: "); 
+        while (!valid) {
+            System.out.println("\nx1:");
+            x1 = keyboard.nextDouble();
             
-            x1 = keyboard.nextDouble(); //get next line typed on keyboard
+            System.out.println("\nx2:");
+            x2 = keyboard.nextDouble();
             
-            if (x1 == 0) { //value is blank
+            System.out.println("\ny1:");
+            y1 = keyboard.nextDouble();
+            
+            System.out.println("\ny2");
+            y2 = keyboard.nextDouble();
+            
+            System.out.println("\nCalucated Distance:");
+            calcDistance = keyboard.nextDouble();
+            
+            if (x1 == 0) {
                 System.out.println("\nInvalid value: x1 must not equal 0");
                 continue;
             }
             
-            break; //end the loop
-        }
-        
-        return x1; //return the value entered
-    }
-    
-    private double getX2Input() {
-        
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        double x2 = 0.0; //value to be returned
-        boolean valid = false; //initalize to not valid
-        
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\nx1: "); 
-            
-            x2 = keyboard.nextDouble(); //get next line typed on keyboard
-            
-            if (x2 == 0) { //value is blank
+            if (x2 == 0)  {
                 System.out.println("\nInvalid value: x2 must not equal 0");
                 continue;
             }
             
-            break; //end the loop
-        }
-        
-        return x2; //return the value entered
-    }
-        
-    private double getY1Input() {
-        
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        double y1 = 0.0; //value to be returned
-        boolean valid = false; //initalize to not valid
-        
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\nx1: "); 
-            
-            y1 = keyboard.nextDouble(); //get next line typed on keyboard
-            
-            if (y1 == 0) { //value is blank
+            if (y1 == 0)  {
                 System.out.println("\nInvalid value: y1 must not equal 0");
                 continue;
             }
             
-            break; //end the loop
-        }
-        
-        return y1; //return the value entered
-    }
-    
-    private double getY2Input() {
-        
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        double y2 = 0.0; //value to be returned
-        boolean valid = false; //initalize to not valid
-        
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\nx1: "); 
-            
-            y2 = keyboard.nextDouble(); //get next line typed on keyboard
-            
-            if (y2 == 0) { //value is blank
+            if (y2 == 0)  {
                 System.out.println("\nInvalid value: y2 must not equal 0");
                 continue;
             }
             
-            break; //end the loop
-        }
-        
-        return y2; //return the value entered
-    }
-    
-    private double getCalcDistanceInput() {
-        
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        double calcDistance = 0.0; //value to be returned
-        boolean valid = false; //initalize to not valid
-        
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\nx1: "); 
-            
-            calcDistance = keyboard.nextDouble(); //get next line typed on keyboard
-            
-            if (calcDistance == 0) { //value is blank
+            if (calcDistance == 0)  {
                 System.out.println("\nInvalid value: Distance must not equal 0");
                 continue;
             }
             
-            break; //end the loop
+            break;
         }
         
-        return calcDistance; //return the value entered
+        this.doAction(x1, x2, y1, y2, calcDistance);
     }
-
-    private boolean doAction () {
-        double x1 = this.getX1Input();
-        double x2 = this.getX2Input();
-        double y1 = this.getY1Input();
-        double y2 = this.getY2Input();
-        double calcDistance = this.getCalcDistanceInput();
+    private boolean doAction(double x1, double x2, double y1, double y2, double calcDistance) {
         
         //calculate distance between points
         MathControl newCalcDistance = new MathControl();
@@ -152,14 +90,17 @@ class GeometryClassRoomView {
         
         //compare to determined if the user input was correct
         if(compareDistance == calcDistance) {
-            System.out.println("\nYou have answered the equation successfully");
+            System.out.println("\nYou have answered the equation successfully"
+                            + "\nYou have been awarded 35 points!!!");
+            return false;
         }
         
         else {
-            System.out.println("\nYour answer was incorrect. Try again!");
+            System.out.println("\nYour answer was incorrect. Try again!"
+                            + "\nYour answer was: " + calcDistance
+                            + "\nThe correct answer is: " + compareDistance);
+            return true;
         }
-       
-        return false;
     }
     
 }

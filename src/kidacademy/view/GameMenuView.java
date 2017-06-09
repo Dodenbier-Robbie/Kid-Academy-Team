@@ -21,9 +21,8 @@ class GameMenuView {
                 + "\n-----------------------------------------"
                 + "\n1 - View map"
                 + "\n2 - Move location"
-                + "\n3 - Math building"
-                + "\n4 - Help menu"
-                + "\n5 - Save game"
+                + "\n3 - Help menu"
+                + "\n4 - Save game"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------";
     }
@@ -67,16 +66,16 @@ class GameMenuView {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice) {
-            case "1": //Redirect to Science Building menu
+            case "1": //Redirect to view map menu
                 this.displayMapMenu();
                 break;
-            case "2": //Redirect to English Building menu
+            case "2": //Redirect to location menu
                 this.displayLocationMenu();
                 break;
-            case "3": //Redirect to Math Building menu
+            case "3": //Redirect to help menu
                 this.displayHelpMenu();
                 break;
-            case "4": //Redirect to Math Building menu
+            case "4": //Redirect to save  menu
                 this.displaySaveGameMenu();
                 break;              
             default: //get and start an existing game
