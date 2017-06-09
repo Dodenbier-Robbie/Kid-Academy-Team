@@ -14,7 +14,7 @@ import java.util.Scanner;
  * 1. Display to the player if their answer is right or wrong
  * 2. Tell the player their new score
  * 3. Ask if they want another question or to go to a different building
- * 
+ * test
  */
 public class AnswerView {
      //create prompt message
