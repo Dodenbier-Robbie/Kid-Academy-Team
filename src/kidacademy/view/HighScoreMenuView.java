@@ -97,10 +97,27 @@ public class HighScoreMenuView {
     }    
 
      private void displayHighScore1() {
-        // display the High Score 1
-        HighScoreMenuView HighScoreMenu = new HighscoreMenuView();
-        highScoreMenu.displayHighScoreMenuView();
-    }
+             System.out.println("*** displayFeedback function called ***");
+     }
+
+    private void displayHighScore2() {
+             System.out.println("*** displayFeedback function called ***");
+   }
+    
+
+    private void displayHighScore3() {
+                  System.out.println("*** displayFeedback function called ***");
+   }
+    
+
+    private void displayHighScore4() {
+                  System.out.println("*** displayFeedback function called ***");
+   }
+    
+
+    private void displayHighScore5() {
+                  System.out.println("*** displayFeedback function called ***");
+   }    
 
 
 }
