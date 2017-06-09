@@ -118,6 +118,11 @@ public class MainMenuView {
 
     private void displayHighScore() {
         System.out.println("*** displayHighScore function called ***");
+           // display the high score menu
+        HighScoreMenuView highScoreMenu = new HighScoreMenuView();
+        highScoreMenu.displayHighscoreMenuView();
+    
     }
+    
     
 }
