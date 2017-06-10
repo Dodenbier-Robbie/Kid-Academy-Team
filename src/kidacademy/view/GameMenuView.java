@@ -87,7 +87,7 @@ class GameMenuView {
     } 
 
     private void displayMapMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displayMapMenu function called ***");
     }
 
     private void displayLocationMenu() {
@@ -96,12 +96,14 @@ class GameMenuView {
         locationMenuView.displayLocationMenuView();
     }
 
-    private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void displayHelpMenu() {  
+        // display the help menu
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
     }
 
     private void displaySaveGameMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displaySaveGameMenu function called ***");
     }
     
 }
