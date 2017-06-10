@@ -97,26 +97,26 @@ public class HighScoreMenuView {
     }    
 
      private void displayHighScore1() {
-             System.out.println("*** displayFeedback function called ***");
+        System.out.println("*** displayHighScore1 function called ***");
      }
 
     private void displayHighScore2() {
-             System.out.println("*** displayFeedback function called ***");
+        System.out.println("*** displayHighScore2 function called ***");
    }
     
 
     private void displayHighScore3() {
-                  System.out.println("*** displayFeedback function called ***");
+        System.out.println("*** displayHighScore3 function called ***");
    }
     
 
     private void displayHighScore4() {
-                  System.out.println("*** displayFeedback function called ***");
+        System.out.println("*** displayHighScore4 function called ***");
    }
     
 
     private void displayHighScore5() {
-                  System.out.println("*** displayFeedback function called ***");
+        System.out.println("*** displayHighScore5 function called ***");
    }    
 
 
