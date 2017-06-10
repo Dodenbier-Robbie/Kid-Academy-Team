@@ -91,6 +91,7 @@ class GeometryClassRoomView {
         MathControl newCalcDistance = new MathControl();
         double compareDistance = newCalcDistance.calcDistanceTwoPoints(x1, x2, y1, y2);
         
+        //round results to two decimal places
         compareDistance = (Math.round(compareDistance * 100.0) / 100.0);
         
         //compare to determined if the user input was correct
