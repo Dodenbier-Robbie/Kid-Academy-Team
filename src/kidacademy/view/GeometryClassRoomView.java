@@ -23,6 +23,7 @@ class GeometryClassRoomView {
                 + "\nAnswer successfully for 35 points"
                 + "\n-----------------------------------------");
     }
+    
     void displayGeometryQuestion() {
         System.out.println("\n\nCalculate the distance between two points."
                 + "\nEnter a value for each of the required inputs as well"
@@ -49,7 +50,8 @@ class GeometryClassRoomView {
             System.out.println("\ny2");
             y2 = keyboard.nextDouble();
             
-            System.out.println("\nCalucated Distance:");
+            System.out.println("\nCalucated Distance:"
+                            + "\n(Round answer to two decimal places)");
             calcDistance = keyboard.nextDouble();
             
             if (x1 == 0) {
@@ -82,14 +84,17 @@ class GeometryClassRoomView {
         
         this.doAction(x1, x2, y1, y2, calcDistance);
     }
+    
     private boolean doAction(double x1, double x2, double y1, double y2, double calcDistance) {
         
         //calculate distance between points
         MathControl newCalcDistance = new MathControl();
         double compareDistance = newCalcDistance.calcDistanceTwoPoints(x1, x2, y1, y2);
         
+        compareDistance = (Math.round(compareDistance * 100.0) / 100.0);
+        
         //compare to determined if the user input was correct
-        if(compareDistance == calcDistance) {
+        if(compareDistance  == calcDistance) {
             System.out.println("\nYou have answered the equation successfully"
                             + "\nYou have been awarded 35 points!!!");
             return false;
@@ -101,6 +106,5 @@ class GeometryClassRoomView {
                             + "\nThe correct answer is: " + compareDistance);
             return true;
         }
-    }
-    
+    } 
 }
