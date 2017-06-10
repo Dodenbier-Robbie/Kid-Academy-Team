@@ -35,9 +35,9 @@ public class QuestionView {
                 + "\n-------------------------------------------------------"
                 + "\n" + this.promptQuestion
                 + "\n1. " + this.promptAnswer1
-                + "\n1. " + this.promptAnswer2
-                + "\n1. " + this.promptAnswer3
-                + "\n1. " + this.promptAnswer4
+                + "\n2. " + this.promptAnswer2
+                + "\n3. " + this.promptAnswer3
+                + "\n4. " + this.promptAnswer4
                 + "\nQ - Quit"
                 + "\n-------------------------------------------------------";
     }

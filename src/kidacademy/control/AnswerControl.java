@@ -14,9 +14,9 @@ import kidacademy.model.Question;
 public class AnswerControl {
 
     public static Question validateAnswer(int answer) {
+        return null;
         //compare answer int to actual answer, if they match, 
         //return "correct", if they do not match, return "incorrect", store answer
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }    
 
 }

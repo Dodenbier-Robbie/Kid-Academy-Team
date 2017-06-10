@@ -100,6 +100,9 @@ public class MainMenuView {
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
+        //***test code*** temporarily adding in link to question view
+        //QuestionView questionView = new QuestionView();
+        //questionView.displayQuestionMenuView();
     }
 
     private void startExistingGame() {
