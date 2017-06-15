@@ -5,7 +5,6 @@
  */
 package kidacademy.view;
 
-import java.util.Scanner;
 import kidacademy.KidAcademy;
 import kidacademy.control.GameControl;
 
@@ -64,8 +63,8 @@ public class MainMenuView extends View {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
         //***test code*** temporarily adding in link to question view
-        //QuestionView questionView = new QuestionView();
-        //QuestionView.displayQuestionMenuView();
+//        QuestionView questionView = new QuestionView();
+//        questionView.display();
     }
 
     private void startExistingGame() {
