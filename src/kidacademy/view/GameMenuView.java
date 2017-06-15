@@ -93,7 +93,7 @@ class GameMenuView {
     private void displayLocationMenu() {
         // display the Science Building menu
         LocationMenuView locationMenuView = new LocationMenuView();
-        locationMenuView.displayLocationMenuView();
+        locationMenuView.display();
     }
 
     private void displayHelpMenu() {  

@@ -11,64 +11,28 @@ import java.util.Scanner;
  *
  * @author rdodenbier
  */
-public class ScienceBuildingView {
-    private String menu;
+public class ScienceBuildingView extends View {
     
     public ScienceBuildingView() {
-        this.menu = "\n"
-                + "\n-----------------------------------------"
-                + "\n |Science Building Menu                 |"
-                + "\n-----------------------------------------"
-                + "\n1 - Animals"
-                + "\n2 - Astronomy"
-                + "\n3 - Biology"
-                + "\n4 - Chemistry"
-                + "\n5 - Dinosaurs"
-                + "\nF - Final Exam"
-                + "\nQ - Quit"
-                + "\n-----------------------------------------";
-    }
-    void displayScienceBuildingView() {
-        
-        boolean done = false; // set flag to not done
-        do {
-            //prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return; // exit the game
-                
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-        } while (!done);        
-    }
-    
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String choice = ""; //value to be returned
-        boolean valid = false; //initalize to not valid
-        
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\n" + this.menu); 
-            
-            choice = keyboard.nextLine(); //get next line typed on keyboard
-            choice = choice.trim(); // trim off leading and trailing breaks
-            
-            if (choice.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-            
-            break; //end the loop
-        }
-        
-        return choice; //return the value entered
+        super("\n"
+            + "\n-----------------------------------------"
+            + "\n |Science Building Menu                 |"
+            + "\n-----------------------------------------"
+            + "\n1 - Animals"
+            + "\n2 - Astronomy"
+            + "\n3 - Biology"
+            + "\n4 - Chemistry"
+            + "\n5 - Dinosaurs"
+            + "\nF - Final Exam"
+            + "\nQ - Quit"
+            + "\n-----------------------------------------");
     }
 
-    private boolean doAction(String choice) {
-        choice = choice.toUpperCase(); //convert choice to upper case
+    @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase(); //convert choice to upper case
         
-        switch (choice) {
+        switch (value) {
             case "1": //Redirect to Animal Class Room
                 this.displayAnimalClassRoom();
                 break;

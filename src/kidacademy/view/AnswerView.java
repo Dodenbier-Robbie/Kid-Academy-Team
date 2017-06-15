@@ -62,7 +62,7 @@ public class AnswerView extends View {
         LocationMenuView locationView = new LocationMenuView();        
         
         // Display the answer menu view
-        locationView.displayLocationMenuView();
+        locationView.display();
     }    
     
 }

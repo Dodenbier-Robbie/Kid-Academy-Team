@@ -11,64 +11,28 @@ import java.util.Scanner;
  *
  * @author rdodenbier
  */
-class MathBuildingView {
-    private String menu;
+class MathBuildingView extends View {
     
     public MathBuildingView() {
-        this.menu = "\n"
-                + "\n-----------------------------------------"
-                + "\n |Math Building Menu                    |"
-                + "\n-----------------------------------------"
-                + "\n1 - Arithmetric"
-                + "\n2 - Geometry"
-                + "\n3 - Algebra"
-                + "\n4 - Trigonometry"
-                + "\n5 - Calculus"
-                + "\nF - Final Exam"
-                + "\nQ - Quit"
-                + "\n-----------------------------------------";
-    }
-    void displayMathBuildingView() {
-
-        boolean done = false; // set flag to not done
-        do {
-            //prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return; // exit the game
-                
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-        } while (!done);        
-    }
-    
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String choice = ""; //value to be returned
-        boolean valid = false; //initalize to not valid
-        
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\n" + this.menu); 
-            
-            choice = keyboard.nextLine(); //get next line typed on keyboard
-            choice = choice.trim(); // trim off leading and trailing breaks
-            
-            if (choice.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-            
-            break; //end the loop
-        }
-        
-        return choice; //return the value entered
+        super("\n"
+            + "\n-----------------------------------------"
+            + "\n |Math Building Menu                    |"
+            + "\n-----------------------------------------"
+            + "\n1 - Arithmetric"
+            + "\n2 - Geometry"
+            + "\n3 - Algebra"
+            + "\n4 - Trigonometry"
+            + "\n5 - Calculus"
+            + "\nF - Final Exam"
+            + "\nQ - Quit"
+            + "\n-----------------------------------------");
     }
 
-    private boolean doAction(String choice) {
-        choice = choice.toUpperCase(); //convert choice to upper case
+    @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase(); //convert choice to upper case
         
-        switch (choice) {
+        switch (value) {
             case "1": //Redirect to Arithmetric Class Room
                 this.displayArithmetricClassRoom();
                 break;
