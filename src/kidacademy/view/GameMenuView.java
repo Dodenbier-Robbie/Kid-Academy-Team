@@ -103,7 +103,9 @@ class GameMenuView {
     }
 
     private void displaySaveGameMenu() {
-        System.out.println("*** displaySaveGameMenu function called ***");
+        // display the saved games menu
+        saveGameMenuView saveGameMenu = new saveGameMenuView();
+        saveGameMenu.display();
     }
     
 }
