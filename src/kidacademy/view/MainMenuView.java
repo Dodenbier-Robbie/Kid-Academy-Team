@@ -78,7 +78,9 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        // display the saved games menu
+        savedGamesMenuView savedGamesMenu = new savedGamesMenuView();
+        savedGamesMenu.display();
     }
 
     private void displayHighScore() {
