@@ -74,7 +74,9 @@ class MathBuildingView extends View {
     }
 
     private void displayTrigonometryClassRoom() {
-        System.out.println("\n*** displayTrigonometryClassRoom() stub function called ***");
+        // Redirect to Trigonometry Class Room
+        TrigonometryClassRoomView trigonometryClassRoom = new TrigonometryClassRoomView();
+        trigonometryClassRoom.displayTrigonometryQuestion();
     }
 
     private void displayCalculusClassRoom() {

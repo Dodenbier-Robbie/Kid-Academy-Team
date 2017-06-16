@@ -248,4 +248,19 @@ public class MathControlTest {
         assertEquals(expResult, result, 0);
         System.out.println("Success");
     }
+    
+        /**
+     * Test of calcDistanceTwoPoints method, of class MathControl.
+     */
+    @Test
+    public void testcalcTempConversion() {
+        //Test 1
+        System.out.println("calcTempConversion Test 1");
+        double degreeF = 65.0;
+        MathControl instance = new MathControl();
+        double expResult = 18.333333;
+        double result = instance.calcTempConversion(degreeF);
+        assertEquals(expResult, result, 0.000001);
+        System.out.println("Success");
+    }
 }

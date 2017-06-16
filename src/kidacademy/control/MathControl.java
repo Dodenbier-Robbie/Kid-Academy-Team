@@ -75,4 +75,10 @@ public class MathControl {
             //Return outputs
             return distance;   
     }
+    public double calcTempConversion(double degreeF) {
+        
+        double degreeC = (5.0 / 9.0) * (degreeF - 32.0);
+        
+        return degreeC;
+    }
 }
