@@ -79,8 +79,8 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         // display the saved games menu
-        savedGamesMenuView savedGamesMenu = new savedGamesMenuView();
-        savedGamesMenu.display();
+        saveGameMenuView saveGameMenu = new saveGameMenuView();
+        saveGameMenu.display();
     }
 
     private void displayHighScore() {
