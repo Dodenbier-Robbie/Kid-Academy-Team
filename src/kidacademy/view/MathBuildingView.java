@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package kidacademy.view;
-
-import java.util.Scanner;
-
 /**
  *
  * @author rdodenbier
@@ -80,7 +77,12 @@ class MathBuildingView extends View {
     }
 
     private void displayCalculusClassRoom() {
-        System.out.println("\n*** displayCalculusClassRoom() stub function called ***");
+        
+        // Create AnswerView object
+        CalculusClassRoomView calculusView = new CalculusClassRoomView();        
+
+        // Display the answer menu view
+        calculusView.display();
     }
 
     private void displayMathFinalExamClassRoom() {
