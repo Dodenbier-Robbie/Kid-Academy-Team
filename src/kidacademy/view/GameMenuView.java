@@ -99,7 +99,7 @@ class GameMenuView {
     private void displayHelpMenu() {  
         // display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
     private void displaySaveGameMenu() {

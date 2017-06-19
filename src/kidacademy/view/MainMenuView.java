@@ -76,7 +76,7 @@ public class MainMenuView extends View {
     private void displayHelpMenu() {   
         // display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
     private void saveGame() {
@@ -89,7 +89,7 @@ public class MainMenuView extends View {
         System.out.println("*** displayHighScore function called ***");
            // display the high score menu
         HighScoreMenuView highScoreMenu = new HighScoreMenuView();
-        highScoreMenu.displayHighscoreMenuView();
+        highScoreMenu.display();
     
     }
     
