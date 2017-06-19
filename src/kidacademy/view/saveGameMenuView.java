@@ -5,32 +5,30 @@
  */
 package kidacademy.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author rdodenbier
  */
-class GraduationCeremonyView extends View {
+public class saveGameMenuView extends View {
     
-    public GraduationCeremonyView() {
+    public saveGameMenuView(){
         super("\n"
             + "\n-----------------------------------------"
-            + "\n |Graduation Ceremony Menu              |"
+            + "\n |Save Game                            |"
             + "\n-----------------------------------------"
-            + "\n1 - Continue to graduation"
+            + "\n1 - Save Game"
             + "\nQ - Quit"
             + "\n-----------------------------------------");
     }
-
+    
     @Override
     public boolean doAction(String value) {
         value = value.toUpperCase(); //convert choice to upper case
         
         switch (value) {
-            case "1": //Redirect to Graduation Ceremony
-                this.displayGraduationCeremony();
-                break;                 
+            case "1": //create and start a new game
+                this.retrieveSaveGame();
+                break;
             default: //get and start an existing game
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -39,7 +37,8 @@ class GraduationCeremonyView extends View {
         return false;
     }
 
-    private void displayGraduationCeremony() {
-        System.out.println("\n*** displayGraduationCeremony() stub function called ***");
+    private void retrieveSaveGame() {
+        System.out.println("*** retrieveSaveGame function called ***");
     }
+    
 }

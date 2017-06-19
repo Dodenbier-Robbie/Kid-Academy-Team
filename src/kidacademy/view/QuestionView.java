@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package kidacademy.view;
-import java.util.Scanner;
 import kidacademy.control.AnswerControl;
-import kidacademy.model.Question;
 
 /**
  * @author Mann
@@ -19,72 +17,27 @@ import kidacademy.model.Question;
  * 
  */
 
-public class QuestionView {
-     //create prompt messages and fill them in with info from the question model - somehow!!!
-    private final String promptQuestion = "What is 2+2?";
-    private final String promptAnswer1 = "1";
-    private final String promptAnswer2 = "2";
-    private final String promptAnswer3 = "3";
-    private final String promptAnswer4 = "4";
-    private final String menu;    
+public class QuestionView extends View{
     
     public QuestionView(){
-        this.menu = "\n"
+        super("\n"
                 + "\n-------------------------------------------------------"
                 + "\nSelect an answer by choosing the corresponding number. "                
                 + "\n-------------------------------------------------------"
-                + "\n" + this.promptQuestion
-                + "\n1. " + this.promptAnswer1
-                + "\n2. " + this.promptAnswer2
-                + "\n3. " + this.promptAnswer3
-                + "\n4. " + this.promptAnswer4
+                + "\nWhat is 2+2?"
+                + "\n1. 1"
+                + "\n2. 2"
+                + "\n3. 3"
+                + "\n4. 4"
                 + "\nQ - Quit"
-                + "\n-------------------------------------------------------";
-    }
-    
- void displayQuestionMenuView() {
- 
-            boolean done = false; // set flag to not done
-            do {
-                //prompt for and get players name
-                String menuOption = this.getMenuOption();
-                if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                    return; // exit the game
-                
-                // do the requested action and display the next view
-                done = this.doAction(menuOption);
-            
-            } while (!done);
+                + "\n-------------------------------------------------------");
     }
 
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String choice = ""; //value to be returned
-        boolean valid = false; //initalize to not valid
+    @Override
+    public boolean doAction(String value) {
+        value = value.toUpperCase(); //convert choice to upper case
         
-        while (!valid) { //loop while and invalid value is enter
-            System.out.println("\n" + this.menu); 
-            
-            choice = keyboard.nextLine(); //get next line typed on keyboard
-            choice = choice.trim(); // trim off leading and trailing breaks
-            
-            if (choice.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
-                continue;
-            }
-            
-            break; //end the loop
-        }
-        
-        return choice; //return the value entered
-    }
-
-    private boolean doAction(String choice) {
-        //sort answer and send for storage
-        
-        choice = choice.toUpperCase(); //convert choice to upper case
-        
-        switch (choice) {
+        switch (value) {
             case "1": //set answer 1
                 this.validateAnswer(1);
                 break;
@@ -118,7 +71,7 @@ public class QuestionView {
         AnswerView answerView = new AnswerView();        
         
         // Display the answer menu view
-        answerView.displayAnswerMenuView();
+        answerView.display();
     }
       
 }
