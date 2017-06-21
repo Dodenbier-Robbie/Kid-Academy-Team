@@ -6,6 +6,7 @@
 package kidacademy.view;
 
 import java.util.Scanner;
+import kidacademy.control.GameControl;
 
 /**
  *
@@ -67,7 +68,7 @@ class GameMenuView {
         
         switch (choice) {
             case "1": //Redirect to view map menu
-                this.displayMapMenu();
+                this.displayMap();
                 break;
             case "2": //Redirect to location menu
                 this.displayLocationMenu();
@@ -86,8 +87,10 @@ class GameMenuView {
         return false;
     } 
 
-    private void displayMapMenu() {
-        System.out.println("*** displayMapMenu function called ***");
+    private void displayMap() {
+        //display the Map
+        MapDisplayView displayMapView = new MapDisplayView();
+        displayMapView.displayMap();
     }
 
     private void displayLocationMenu() {
@@ -104,8 +107,13 @@ class GameMenuView {
 
     private void displaySaveGameMenu() {
         // display the saved games menu
-        saveGameMenuView saveGameMenu = new saveGameMenuView();
+        SaveGameMenuView saveGameMenu = new SaveGameMenuView();
         saveGameMenu.display();
+    }
+    
+    private void startNewGame() {
+        GameControl createNewGame = new GameControl();
+        createNewGame.createNewGame();
     }
     
 }

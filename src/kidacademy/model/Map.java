@@ -6,6 +6,7 @@
 package kidacademy.model;
 import java.io.Serializable;
 import java.util.Objects;
+import kidacademy.control.GameControl;
 
 /**
  *
@@ -14,11 +15,34 @@ import java.util.Objects;
 public class Map implements Serializable{
     private String description;
     private double dimension;
+    
+    private int noOfRows;
+    private int noOfColumns;
+    private Location[][] locations;
 
     public Map() {
     }
-    
-    
+
+    private Map(int noOfRows, int noOfColumns) {
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println("The number of rows and columns must be > zero");
+        }
+        
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        this.locations = new Location[noOfRows][noOfColumns];
+        
+        for (int row = 0; row < noOfRows; row++) {
+            for(int column = 0; column < noOfColumns; column++) {
+                Location location = new Location();
+                location.setColumn(column);  
+                location.setRow(row);
+                location.setVisited(false);
+            }
+            
+        }
+    }
     
     public String getDescription() {
         return description;
@@ -34,9 +58,23 @@ public class Map implements Serializable{
 
     public void setDimension(double dimension) {
         this.dimension = dimension;
+    }
         
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }  
+    
+    private static Map createMap() {
         
+        Map map = new Map(10,10);
         
+        GameControl.assignsScenesToLocations(map);
+        
+        return map;
     }
 
     @Override

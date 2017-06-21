@@ -6,6 +6,8 @@
 package kidacademy.control;
 
 import kidacademy.KidAcademy;
+import kidacademy.model.Game;
+import kidacademy.model.Map;
 import kidacademy.model.Player;
 
 /**
@@ -29,7 +31,24 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("\n*** crateNewGame stub function called ***");
+        
+        Game game = new Game();
+        KidAcademy.setCurrentGame(game);
+        
+        game.setPlayer(player);
+        
+        Map map = MapControl.createMap();
+        game.setMap(map);
+        
+        MapControl.moveActorsToStartingLocation(map);
+    }
+
+    public static void assignsScenesToLocations(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void createNewGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -6,6 +6,7 @@
 package kidacademy.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -18,6 +19,10 @@ public class Location implements Serializable {
     //class instance variables
     private Boolean completed;
     private String coordinates;
+    
+    private int row;
+    private int column;
+    private ArrayList<Actor> actors;
 
     public Location() {
     }
@@ -70,6 +75,18 @@ public class Location implements Serializable {
             return false;
         }
         return true;
+    }
+
+    void setColumn(int column) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setRow(int row) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

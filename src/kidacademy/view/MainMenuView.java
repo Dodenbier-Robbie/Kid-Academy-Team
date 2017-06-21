@@ -81,12 +81,11 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         // display the saved games menu
-        saveGameMenuView saveGameMenu = new saveGameMenuView();
+        SaveGameMenuView saveGameMenu = new SaveGameMenuView();
         saveGameMenu.display();
     }
 
     private void displayHighScore() {
-        System.out.println("*** displayHighScore function called ***");
            // display the high score menu
         HighScoreMenuView highScoreMenu = new HighScoreMenuView();
         highScoreMenu.display();
