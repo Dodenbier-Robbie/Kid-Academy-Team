@@ -13,7 +13,7 @@ import kidacademy.control.GameControl;
  * @author Mann
  */
 class GameMenuView {
-    private String menu;
+    private final String menu;
     
     public GameMenuView() {
         this.menu = "\n"

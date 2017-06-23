@@ -5,6 +5,8 @@
  */
 package kidacademy.view;
 
+import kidacademy.model.Location;
+
 /**
  *
  * @author rdodenbier
@@ -12,7 +14,16 @@ package kidacademy.view;
 class MapDisplayView {
 
     void displayMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Location coordinates = new Location();
+        
+        int row = coordinates.getRow();
+        int column = coordinates.getColumn();
+        
+        System.out.println(row);
+        
+        System.out.println("\nKid Academy School Campus");
+        System.out.println("\n1    2    3    4    5"
+                           + "---------------------");
     }
     
 }

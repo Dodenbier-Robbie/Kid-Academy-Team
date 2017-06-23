@@ -21,9 +21,9 @@ import java.util.Objects;
     
         // class instance variables
         private final String description;
-        private final String coordinates;
-        private final int currentScore;
-        private final String player;
+        private String coordinates;
+        private int currentScore;
+        private String player;
 
     Actor(String description) {
         this.description = description;
@@ -52,11 +52,6 @@ import java.util.Objects;
 
     public void setPlayer(String player) {
         this.player = player;
-    }
-
-    @Override
-    public String toString() {
-        return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", currentScore=" + currentScore + ", player=" + player + '}';
     }
     
 }
