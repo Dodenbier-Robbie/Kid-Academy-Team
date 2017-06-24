@@ -15,15 +15,15 @@ import java.util.Objects;
 public class Question implements Serializable{
     
     // Class instance variables
-    private String question;
-    private String answerCorrect;
-    private String answerPotential1;
-    private String answerPotential2;
-    private String answerPotential3;
-    private String answerPotential4;
-    private String subject;
-    private Double score;
-
+        private String question;
+        private Integer answerCorrect;
+        private String answerPotential1;
+        private String answerPotential2;
+        private String answerPotential3;
+        private String answerPotential4;
+        private String subject;
+        private Double score;
+    
     public String getQuestion() {
         return question;
     }
@@ -32,11 +32,11 @@ public class Question implements Serializable{
         this.question = question;
     }
 
-    public String getAnswerCorrect() {
+    public Integer getAnswerCorrect() {
         return answerCorrect;
     }
 
-    public void setAnswerCorrect(String answerCorrect) {
+    public void setAnswerCorrect(Integer answerCorrect) {
         this.answerCorrect = answerCorrect;
     }
 
@@ -44,7 +44,7 @@ public class Question implements Serializable{
         return answerPotential1;
     }
 
-    public void setAnswerPotential(String answerPotential1) {
+    public void setAnswerPotential1(String answerPotential1) {
         this.answerPotential1 = answerPotential1;
     }
 
@@ -153,13 +153,5 @@ public class Question implements Serializable{
     public void setScore(String this_is_your_score) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
