@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package kidacademy.view;
-import kidacademy.control.AnswerControl;
+import kidacademy.model.Question;
+import kidacademy.control.QuestionControl;
 
 /**
  * @author Mann
@@ -18,9 +19,11 @@ import kidacademy.control.AnswerControl;
  */
 
 public class QuestionView extends View{
-    
+    public Question currentQuestion;
     public QuestionView(){
-        super("\n"
+        
+        // Instead of using super, call a setMessage function on View
+        /*super("\n"
                 + "\n-------------------------------------------------------"
                 + "\nSelect an answer by choosing the corresponding number. "                
                 + "\n-------------------------------------------------------"
@@ -30,7 +33,26 @@ public class QuestionView extends View{
                 + "\n3. 3"
                 + "\n4. 4"
                 + "\nQ - Quit"
-                + "\n-------------------------------------------------------");
+                + "\n-------------------------------------------------------");*/
+        
+        //fill in the "calculus" with the room from the room view
+        QuestionControl questionControl = new QuestionControl();
+        currentQuestion = questionControl.getQuestion("calculus");
+        
+        this.setMessage(
+                "\n"
+                + "\n-------------------------------------------------------"
+                + "\nSelect an answer by choosing the corresponding number. "                
+                + "\n-------------------------------------------------------"
+                + "\n" + currentQuestion.getQuestion()
+                + "\n1." + currentQuestion.getAnswerPotential1()
+                + "\n2." + currentQuestion.getAnswerPotential2()
+                + "\n3." + currentQuestion.getAnswerPotential3()
+                + "\n4." + currentQuestion.getAnswerPotential4()
+                + "\nQ - Quit"
+                + "\n-------------------------------------------------------"
+        );
+        
     }
 
     @Override
@@ -59,19 +81,27 @@ public class QuestionView extends View{
     }
 
     private void validateAnswer(int answer) {
-        //send off answer to be validated and stored
-        AnswerControl.validateAnswer(answer);        
+        Integer answerCorrect = currentQuestion.getAnswerCorrect();
+        if(answer == answerCorrect) {
+            System.out.println("\nYou have answered the question successfully."
+                            + "\nYou have been awarded 35 points!!!");
+        }
 
-        //Display next view
-        this.displayAnswerView();
+        else {
+            System.out.println("\nYour answer was incorrect. Try again!");
+
+        }       
+        this.displayLocationView();
+    
     }
-    private void displayAnswerView() {
+
+    private void displayLocationView() {
 
         // Create AnswerView object
-        AnswerView answerView = new AnswerView();        
-        
+        LocationMenuView locationView = new LocationMenuView();        
+
         // Display the answer menu view
-        answerView.display();
-    }
-      
+        locationView.display();
+    }    
+    
 }
