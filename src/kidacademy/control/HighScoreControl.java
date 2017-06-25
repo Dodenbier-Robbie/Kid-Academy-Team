@@ -31,8 +31,7 @@ public class HighScoreControl {
         public HighScore() {
         }
 
-        private HighScore(String robbie, int i) {
-            System.out.println("*** High Score function called ***");
+        private HighScore(String playerName, int playerScore) {
         }
     }
 }
