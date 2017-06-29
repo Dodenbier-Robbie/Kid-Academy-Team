@@ -6,6 +6,7 @@
 package kidacademy.control;
 
 import kidacademy.KidAcademy;
+import kidacademy.exceptions.MapControlException;
 import kidacademy.model.Game;
 import kidacademy.model.Map;
 import kidacademy.model.Player;
@@ -30,7 +31,7 @@ public class GameControl {
         return player;
     }
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws MapControlException {
         
         Game game = new Game();
         KidAcademy.setCurrentGame(game);

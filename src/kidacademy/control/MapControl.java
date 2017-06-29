@@ -26,16 +26,16 @@ class MapControl {
                             throws MapControlException {
         Actor[] actors = Actor.values();
         //for every actor
+        
         for (Actor actor : actors) {
             Point coordinates = actor.getCoordinates();
             MapControl.moveActorToLocation(actor, coordinates);
         }
         
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public static void moveActorToLocation(Actor actor, Point coordinates) 
-        throws MapControlException {
+                            throws MapControlException {
        Map map = KidAcademy.getCurrentGame().getMap();
        int newRow = coordinates.x-1;
        int newColumn = coordinates.y-1;

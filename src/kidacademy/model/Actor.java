@@ -56,6 +56,9 @@ import java.util.Objects;
 
     public class Point {
 
+        public int x;
+        public int y;
+
         private Point(int i, int i0) {
             int x = i;
             int y = i0;
