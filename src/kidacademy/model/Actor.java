@@ -20,21 +20,21 @@ import java.util.Objects;
         Andrew("The busiest of them all");
     
         // class instance variables
-        private final String description;
-        private String coordinates;
+        private String description;
+        private Point coordinates;
         private int currentScore;
         private String player;
 
     Actor(String description) {
         this.description = description;
-        //coordinates = new Point(1,1);
+        coordinates = new Point(1,1);
     }
 
     public String getDescription() {
         return description;
     }
 
-    public String getCoordinates() {
+    public Point getCoordinates() {
         return coordinates;
     }
 
@@ -52,6 +52,14 @@ import java.util.Objects;
 
     public void setPlayer(String player) {
         this.player = player;
+    }
+
+    public class Point {
+
+        private Point(int i, int i0) {
+            int x = i;
+            int y = i0;
+        }
     }
     
 }

@@ -65,5 +65,9 @@ public class Game implements Serializable{
     public void setPlayer(Player player) {
         System.out.println("*** setPlayer function called ***");
     }
+
+    public Map getMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
