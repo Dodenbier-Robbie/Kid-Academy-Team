@@ -22,11 +22,16 @@ public class KidAcademy {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
+        StartProgramView startProgramView = new StartProgramView ();
+        try {
+            // create StartProgramView and start the program
+            startProgramView.display();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
         
-        
-      StartProgramView startProgramView = new StartProgramView ();
-      startProgramView.display();
     }
 
     public static Game getCurrentGame() {
@@ -45,6 +50,4 @@ public class KidAcademy {
         KidAcademy.player = player;
     }
 
-    
-    
 }
