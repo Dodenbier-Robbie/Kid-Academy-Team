@@ -6,6 +6,7 @@
 package kidacademy.control;
 
 import java.util.Random;
+import kidacademy.exceptions.QuestionControlException;
 import kidacademy.model.Question;
 
 /**
@@ -15,28 +16,38 @@ import kidacademy.model.Question;
 public class QuestionControl {
 
     public static Question getQuestion(String type) {
-        Question question;
-        
-        Question[] questions = createQuestionList();
-        Question[] validQuestions = new Question[2];
-        int nextArrayIndex = 0;
-        
-        // Loop through and get questions for this subject
-        for (int i = 0; i < questions.length; i++){
-        
-            if (questions[i].getSubject() == type) {
-                validQuestions[nextArrayIndex] = questions[i];
-                nextArrayIndex++;
+        try {
+            Question question;
+
+            Question[] questions = createQuestionList();
+            Question[] validQuestions = new Question[2];
+            int nextArrayIndex = 0;
+
+            // Loop through and get questions for this subject
+            for (int i = 0; i < questions.length; i++){
+
+                if (questions[i].getSubject() == type) {
+                    validQuestions[nextArrayIndex] = questions[i];
+                    nextArrayIndex++;
+                }
+
             }
-        
+
+            // Loop through validQuestions and choose one randomly
+            Random r = new Random();
+            int result = r.nextInt(nextArrayIndex);
+            question = validQuestions[result];
+
+            //error handling
+            if (question == null){
+                throw new QuestionControlException("Question not found.");
+            }
+
+            return question;
+            
+        } catch(QuestionControlException qce){
+            return null;
         }
-        
-        // Loop through validQuestions and choose one randomly
-        Random r = new Random();
-        int result = r.nextInt(nextArrayIndex);
-        question = validQuestions[result];
-        
-        return question;
     }
     
     
