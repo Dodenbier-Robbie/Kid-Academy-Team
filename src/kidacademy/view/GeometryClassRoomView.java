@@ -7,6 +7,7 @@ package kidacademy.view;
 
 import java.util.Scanner;
 import kidacademy.control.MathControl;
+import kidacademy.exceptions.MathControlException;
 
 /**
  *
@@ -86,26 +87,31 @@ class GeometryClassRoomView {
     }
     
     private boolean doAction(double x1, double x2, double y1, double y2, double calcDistance) {
-        
-        //calculate distance between points
-        MathControl newCalcDistance = new MathControl();
-        double compareDistance = newCalcDistance.calcDistanceTwoPoints(x1, x2, y1, y2);
-        
-        //round results to two decimal places
-        compareDistance = (Math.round(compareDistance * 100.0) / 100.0);
-        
-        //compare to determined if the user input was correct
-        if(compareDistance  == calcDistance) {
-            System.out.println("\nYou have answered the equation successfully"
-                            + "\nYou have been awarded 35 points!!!");
-            return false;
+        try {
+            //calculate distance between points
+            MathControl newCalcDistance = new MathControl();
+            double compareDistance = newCalcDistance.calcDistanceTwoPoints(x1, x2, y1, y2);
+
+            //round results to two decimal places
+            compareDistance = (Math.round(compareDistance * 100.0) / 100.0);
+
+            //compare to determined if the user input was correct
+            if(compareDistance  == calcDistance) {
+                System.out.println("\nYou have answered the equation successfully"
+                                + "\nYou have been awarded 35 points!!!");
+                return false;
+            }
+
+            else {
+                System.out.println("\nYour answer was incorrect. Try again!"
+                                + "\nYour answer was: " + calcDistance
+                                + "\nThe correct answer is: " + compareDistance);
+                return true;
+            }
+            
+        } catch(MathControlException mce) {
+        System.out.println(mce.getMessage());
+        return true;
         }
-        
-        else {
-            System.out.println("\nYour answer was incorrect. Try again!"
-                            + "\nYour answer was: " + calcDistance
-                            + "\nThe correct answer is: " + compareDistance);
-            return true;
-        }
-    } 
+    }
 }

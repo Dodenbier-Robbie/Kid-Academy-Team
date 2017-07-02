@@ -24,9 +24,19 @@ public class StartProgramView extends View{
     private void displayBanner() {
         System.out.println(    
         "\n*************************************************"
-        +"\n                                               *"
-        +"\n This is the game description                  *"
-        +"\n************************************************"
+        + "\n                                               *"
+        + "\nWelcome to Kid Academy!!!!!!"
+        + "\n\nThis is your chance to be smarter than a 5th"
+        + "\ngrader. As you explore through the Kid Academy"
+        + "\ncampus, you'll be challenged with questions"
+        + "\nsuitable for kids in 5th grader or lower."
+        + "\n\nFor each correct answer, you'll receive a score"
+        + "\nthat will count towards your graduation from"
+        + "\nKid Academy."
+        + " \n"
+        + "\nGood luck!!!                                    "
+        + "\n                                               *"
+        + "\n************************************************"
         );
     }
 

@@ -27,7 +27,7 @@ public class SaveGameMenuView extends View {
         
         switch (value) {
             case "1": //create and start a new game
-                this.retrieveSaveGame();
+                this.retrievedSaveGame();
                 break;
             default: //get and start an existing game
                 System.out.println("\n*** Invalid Selection *** Try Again");
@@ -37,7 +37,7 @@ public class SaveGameMenuView extends View {
         return false;
     }
 
-    private void retrieveSaveGame() {
+    private void retrievedSaveGame() {
         System.out.println("*** retrieveSaveGame function called ***");
     }
     

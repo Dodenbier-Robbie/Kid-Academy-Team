@@ -38,10 +38,10 @@ public class GameControl {
         
         game.setPlayer(player);
         
-        Map map = MapControl.createMap();
-        game.setMap(map);
+        //Map map = MapControl.createMap();
+        //game.setMap(map);
         
-        MapControl.moveActorsToStartingLocation(map);
+        //MapControl.moveActorsToStartingLocation(map);
     }
 
     public static void assignsScenesToLocations(Map map) {

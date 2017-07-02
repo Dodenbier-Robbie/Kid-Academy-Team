@@ -5,7 +5,10 @@
  */
 package kidacademy.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import kidacademy.control.HighScoreControl;
+import kidacademy.model.HighScore;
 
 /**
  *
@@ -13,9 +16,8 @@ import java.util.Scanner;
  */
 
     public class HighScoreMenuView extends View {
-   
     
-     public HighScoreMenuView () {
+    public HighScoreMenuView () {
                 super("\n"
                         + "\n--------------------------------------"
                         + "\n | High Score Menu                   |"
@@ -27,35 +29,41 @@ import java.util.Scanner;
                         + "\n5 - High Score Player #5 Score"
                         + "\nQ - Quit"
                         + "\n-----------------------------------------");
+        
+        HighScoreControl displayHighScores = new HighScoreControl();
+        ArrayList<HighScoreControl.HighScore> displayScores;
+        displayScores = displayHighScores.getHighScores();
+        
+        System.out.println(displayScores.get(0));
 }
 
           
-      @Override
-      public boolean doAction(String value) {
-        value = value.toUpperCase(); //convert choice to upper case
-        
-        switch (value) {
-            case "1": //Display High Score Player #1
-                this.displayHighScore1();
-                break;
-            case "2": //Display High Score Player #2
-                this.displayHighScore2();
-                break;
-            case "3": //Display High Score Player #3
-                this.displayHighScore3();
-                break;
-            case "4": //Display High Score Player #4
-                this.displayHighScore4();
-                break;
-            case "5": //Display High Score Player #5
-                this.displayHighScore5();
-                break;                
-            default: //get and start an existing game
-                System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
-        }
+        @Override
+        public boolean doAction(String value) {
+          value = value.toUpperCase(); //convert choice to upper case
 
-        return false;
+          switch (value) {
+              case "1": //Display High Score Player #1
+                  this.displayHighScore1();
+                  break;
+              case "2": //Display High Score Player #2
+                  this.displayHighScore2();
+                  break;
+              case "3": //Display High Score Player #3
+                  this.displayHighScore3();
+                  break;
+              case "4": //Display High Score Player #4
+                  this.displayHighScore4();
+                  break;
+              case "5": //Display High Score Player #5
+                  this.displayHighScore5();
+                  break;                
+              default: //get and start an existing game
+                  System.out.println("\n*** Invalid Selection *** Try Again");
+                  break;
+          }
+
+          return false;
     }    
 
      private void displayHighScore1() {

@@ -7,6 +7,7 @@ package kidacademy.view;
 
 import java.util.Scanner;
 import kidacademy.control.MathControl;
+import kidacademy.exceptions.MathControlException;
 
 /**
  *
@@ -50,24 +51,31 @@ class TrigonometryClassRoomView {
     }    
 
     private boolean doAction(double degreeF, double calcDegreeC) {
-        //calculate distance between points
-        MathControl newCalcDegree = new MathControl();
-        double compareDegree = newCalcDegree.calcTempConversion(degreeF);
         
-        //round results to two decimal places
-        compareDegree = (Math.round(compareDegree * 100.0) / 100.0);
-        
-        //compare to determined if the user input was correct
-        if(compareDegree  == calcDegreeC) {
-            System.out.println("\nYou have answered the equation successfully"
-                            + "\nYou have been awarded 35 points!!!");
-            return false;
-        }
-        
-        else {
-            System.out.println("\nYour answer was incorrect. Try again!"
-                            + "\nYour answer was: " + calcDegreeC
-                            + "\nThe correct answer is: " + compareDegree);
+        try {
+            //calculate distance between points
+            MathControl newCalcDegree = new MathControl();
+            double compareDegree = newCalcDegree.calcTempConversion(degreeF);
+
+            //round results to two decimal places
+            compareDegree = (Math.round(compareDegree * 100.0) / 100.0);
+
+            //compare to determined if the user input was correct
+            if(compareDegree  == calcDegreeC) {
+                System.out.println("\nYou have answered the equation successfully"
+                                + "\nYou have been awarded 35 points!!!");
+                return false;
+            }
+
+            else {
+                System.out.println("\nYour answer was incorrect. Try again!"
+                                + "\nYour answer was: " + calcDegreeC
+                                + "\nThe correct answer is: " + compareDegree);
+                return true;
+            }
+            
+        } catch (MathControlException mce) {
+            System.out.println(mce.getMessage());
             return true;
         }
     } 

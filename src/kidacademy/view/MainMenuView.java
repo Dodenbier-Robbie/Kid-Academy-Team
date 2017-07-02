@@ -5,8 +5,11 @@
  */
 package kidacademy.view;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import kidacademy.KidAcademy;
 import kidacademy.control.GameControl;
+import kidacademy.exceptions.MapControlException;
 
 /**
  *
@@ -22,7 +25,7 @@ public class MainMenuView extends View {
             + "\n1 - Go to school"
             + "\n2 - Continue a saved game"
             + "\n3 - Help menu"
-            + "\n4 - Tutorial"
+            + "\n4 - Save game"
             + "\n5 - High score menu"
             + "\nQ - Quit"
             + "\n-----------------------------------------");
@@ -33,8 +36,14 @@ public class MainMenuView extends View {
         value = value.toUpperCase(); //convert choice to upper case
         
         switch (value) {
-            case "1": //create and start a new game
+            case "1": {
+            try {
+                //create and start a new game
                 this.startNewGame();
+            } catch (MapControlException ex) {
+                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case "2": //get and start an existing game
                 this.startExistingGame();
@@ -56,7 +65,7 @@ public class MainMenuView extends View {
         return false;
     }
 
-    private void startNewGame() {
+    private void startNewGame() throws MapControlException {
         GameControl.createNewGame(KidAcademy.getPlayer());
         
         // display the game menu

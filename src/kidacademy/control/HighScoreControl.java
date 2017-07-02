@@ -6,6 +6,7 @@
 package kidacademy.control;
 
 import java.util.ArrayList;
+import kidacademy.model.HighScore;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  */
 public class HighScoreControl {
     
-    public ArrayList<HighScore> addHighScores( ) {
+    public ArrayList<HighScore> getHighScores() {
         // create an ArrayList of high scores 
         ArrayList<HighScore> highScore = new ArrayList<>();
 
@@ -26,12 +27,9 @@ public class HighScoreControl {
         return highScore;
     }
 
-    private static class HighScore {
+    public static class HighScore {
 
-        public HighScore() {
-        }
-
-        private HighScore(String playerName, int playerScore) {
+        public HighScore(String playerName, int playerScore) {
         }
     }
 }

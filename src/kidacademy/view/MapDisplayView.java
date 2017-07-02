@@ -6,6 +6,7 @@
 package kidacademy.view;
 
 import kidacademy.model.Location;
+import kidacademy.model.Map;
 
 /**
  *
@@ -14,15 +15,26 @@ import kidacademy.model.Location;
 class MapDisplayView {
 
     void displayMap() {
-        Location coordinates = new Location();
+        Map location = new Map();
+        Location[][] mapLocation = location.getLocations();
         
-        int row = coordinates.getRow();
-        int column = coordinates.getColumn();
+        int noOfRows = 8;
+        int noOfColumns = 8;
         
-        System.out.println(row);
         
-        System.out.println("\nKid Academy School Campus");
-        System.out.println("\n1    2    3    4    5"
-                           + "---------------------");
+        System.out.println("\n        Kid Academy School Campus");
+        System.out.println("\n  1    2    3    4    5    6    7    8");
+        
+        for (int i = 0; i < noOfRows; i++) {
+            System.out.print("------------------------------------------" + "\n" + (i+1));
+            
+            for (int j = 0; j < noOfColumns; j++) {
+                System.out.print("| ?? ");
+            }
+            
+            System.out.println("|");
+        }
+        
+        System.out.println("------------------------------------------");
     }
 }    
