@@ -54,32 +54,7 @@ class GeometryClassRoomView {
             System.out.println("\nCalucated Distance:"
                             + "\n(Round answer to two decimal places)");
             calcDistance = keyboard.nextDouble();
-            
-            if (x1 == 0) {
-                System.out.println("\nInvalid value: x1 must not equal 0");
-                continue;
-            }
-            
-            if (x2 == 0)  {
-                System.out.println("\nInvalid value: x2 must not equal 0");
-                continue;
-            }
-            
-            if (y1 == 0)  {
-                System.out.println("\nInvalid value: y1 must not equal 0");
-                continue;
-            }
-            
-            if (y2 == 0)  {
-                System.out.println("\nInvalid value: y2 must not equal 0");
-                continue;
-            }
-            
-            if (calcDistance == 0)  {
-                System.out.println("\nInvalid value: Distance must not equal 0");
-                continue;
-            }
-            
+     
             break;
         }
         

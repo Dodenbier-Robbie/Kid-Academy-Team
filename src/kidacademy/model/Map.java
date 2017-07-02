@@ -91,9 +91,7 @@ public class Map implements Serializable{
         int hash = 7;
         hash = 37 * hash + Objects.hashCode(this.description);
         hash = 37 * hash + (int) (Double.doubleToLongBits(this.dimension) ^ (Double.doubleToLongBits(this.dimension) >>> 32));
-        return hash;
-        
-           
+        return hash;     
     }
 
     @Override

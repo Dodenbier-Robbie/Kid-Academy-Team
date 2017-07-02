@@ -80,28 +80,14 @@ public class MathControl {
                     throws MathControlException {
         try {
         //Check for invalid values
-            if(x1 == y1 && x1 == x2 && x1 == y2){
-                return -1;
-            }
-
-            if(y1 == x1 && y1 == x2 && y1 == y2){
-                return -1;
-            }
-
-            if(x2 == y1 && x2 == x1 && x2 == y2){
-                return -1;
-            }            
-
-            if(y2 == y1 && y2 == x2 && y2 == y1){
-                return -1;
+            if((x1 == y1 && x1 == x2 && x1 == y2) || (y1 == x1 && y1 == x2 && y1 == y2) ||
+                (x2 == y1 && x2 == x1 && x2 == y2) || (y2 == y1 && y2 == x2 && y2 == y1)) { 
+                
+                throw new MathControlException("Entered an invalid value");
             }            
 
             //Body statements
             double distance = Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2));
-            
-            if (distance == 0) {
-                throw new MathControlException("Answer cannont be zero");
-            }
 
             //Return outputs
             return distance; 
