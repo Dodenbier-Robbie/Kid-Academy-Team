@@ -58,7 +58,8 @@ public class MainMenuView extends View {
                 this.displayHighScore();
                 break;
             default: //get and start an existing game
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display("MainMenuView",
+                                "*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -77,9 +78,21 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        // display the start existing game menu
-        startExistingGameMenuView startExisitingGameMenu = new startExistingGameMenuView();
-        startExisitingGameMenu.display();
+        //prompt for and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for the file where the game "
+                        + "is to be saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            //start saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+//        // display the start existing game menu
+//        startExistingGameMenuView startExisitingGameMenu = new startExistingGameMenuView();
+//        startExisitingGameMenu.display();
     }
 
     private void displayHelpMenu() {   
@@ -89,9 +102,21 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        // display the saved games menu
-        SaveGameMenuView saveGameMenu = new SaveGameMenuView();
-        saveGameMenu.display();
+        //prompt for and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for the file where the game "
+                        + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(KidAcademy.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+
+// display the saved games menu
+//        SaveGameMenuView saveGameMenu = new SaveGameMenuView();
+//        saveGameMenu.display();
     }
 
     private void displayHighScore() {
