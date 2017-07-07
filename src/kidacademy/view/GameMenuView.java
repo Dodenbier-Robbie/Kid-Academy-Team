@@ -75,10 +75,7 @@ class GameMenuView {
                 break;
             case "3": //Redirect to help menu
                 this.displayHelpMenu();
-                break;
-            case "4": //Redirect to save  menu
-                this.displaySaveGameMenu();
-                break;              
+                break;            
             default: //get and start an existing game
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -103,12 +100,6 @@ class GameMenuView {
         // display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
-    }
-
-    private void displaySaveGameMenu() {
-        // display the saved games menu
-        SaveGameMenuView saveGameMenu = new SaveGameMenuView();
-        saveGameMenu.display();
     }
     
     private void startNewGame() {
