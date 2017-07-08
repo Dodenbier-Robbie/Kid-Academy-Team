@@ -7,7 +7,6 @@ package kidacademy.control;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import kidacademy.model.HighScore;
 
 /**
  *
@@ -24,7 +23,7 @@ public class HighScoreControl {
         highScore.add(new HighScore("Robbie", 500));
         highScore.add(new HighScore("Michael", 400));
         highScore.add(new HighScore("Andrew", 300));
-        highScore.add(new HighScore("Rudy", 200));
+        highScore.add(new HighScore("RudyR", 200));
         highScore.add(new HighScore("Peter", 100));
         
         return highScore;
@@ -88,6 +87,6 @@ public class HighScoreControl {
 
     @Override
     public String toString() {
-        return (playerName + "            " + playerScore);
+        return (playerName + "\t\t\t" + playerScore);
     }
 }}
