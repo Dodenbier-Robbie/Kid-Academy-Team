@@ -19,6 +19,7 @@ import kidacademy.model.HighScore;
     
     public HighScoreMenuView () {
         super("\n-----------------------------------------"
+                + "\n1 - Export High Scores to file"
                 + "\nQ - Quit"
                 + "\n-----------------------------------------");
         
@@ -26,13 +27,13 @@ import kidacademy.model.HighScore;
         ArrayList<HighScoreControl.HighScore> displayScores;
         displayScores = displayHighScores.getHighScores();
         
-        System.out.println("\n" 
+        this.console.println("\n" 
                        + "\n-----------------------------------------"
                        + "\n |High Scores                 |"
                        + "\n-----------------------------------------");
         
         for (int i = 0; i < displayScores.size(); i++){
-            System.out.println(i+1 + ": " + displayScores.get(i));
+            this.console.println(i+1 + ": " + displayScores.get(i));
         }
 }
 
@@ -41,12 +42,22 @@ import kidacademy.model.HighScore;
           value = value.toUpperCase(); //convert choice to upper case
 
           switch (value) {            
+                case "1": //call high score report class
+                this.displayHighScoreReportView();
+                break;
+              
               default: //get and start an existing game
-                  System.out.println("\n*** Invalid Selection *** Try Again");
-                  break;
+                this.console.println("\n*** Invalid Selection *** Try Again");
+                break;
           }
 
           return false;
     }    
+
+    private void displayHighScoreReportView() {
+        //display the Map
+        HighScoreReportView displayHighScoreReport = new HighScoreReportView();
+        displayHighScoreReport.displayHighScoreReport();
+    }
 
 }

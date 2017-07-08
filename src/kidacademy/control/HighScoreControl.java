@@ -88,6 +88,6 @@ public class HighScoreControl {
 
     @Override
     public String toString() {
-        return (playerName + " - " + playerScore);
+        return (playerName + "            " + playerScore);
     }
 }}
