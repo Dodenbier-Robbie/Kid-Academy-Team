@@ -29,7 +29,6 @@ public class SaveReportView {
             //print the player names and scores
             for (int i = 0; i < highScores.size(); i++){
                 out.printf("%n%-20s",highScores.get(i));
-                //int s = highScores.get(i).getPlayerScore(i);
             }
         }
         catch(Exception e) {
