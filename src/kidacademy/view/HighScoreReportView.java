@@ -34,7 +34,7 @@ public class HighScoreReportView extends View {
             // save the game to the specified file
             SaveReportView.saveHighScoreReport(displayHighScores.getHighScores(), filePath);
             
-            this.console.println("Your file was successfully saved!");
+            this.console.println("\n\nYour file was successfully saved!");
             
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());

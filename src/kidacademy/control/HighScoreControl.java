@@ -25,6 +25,7 @@ public class HighScoreControl {
         highScore.add(new HighScore("Andrew", 300));
         highScore.add(new HighScore("RudyR", 200));
         highScore.add(new HighScore("Peter", 100));
+        highScore.add(new HighScore("Camden", 50));
         
         return highScore;
     }
