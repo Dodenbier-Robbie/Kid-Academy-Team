@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import kidacademy.KidAcademy;
 import kidacademy.control.GameControl;
+import kidacademy.control.QuestionControl;
 import kidacademy.exceptions.MapControlException;
 
 /**
@@ -27,6 +28,7 @@ public class MainMenuView extends View {
             + "\n3 - Help menu"
             + "\n4 - Save game"
             + "\n5 - High score menu"
+            + "\n6 - Print study list"   
             + "\nQ - Quit"
             + "\n-----------------------------------------");
     }
@@ -56,6 +58,9 @@ public class MainMenuView extends View {
                 break;
             case "5": //get and show high score
                 this.displayHighScore();
+                break;
+            case "6": //get and show all questions
+                this.saveStudyList();
                 break;
             default: //get and start an existing game
                 ErrorView.display("MainMenuView",
@@ -101,6 +106,20 @@ public class MainMenuView extends View {
         helpMenu.display();
     }
 
+    private void saveStudyList() {   
+        //prompt for and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for the file where the game "
+                        + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            QuestionControl.saveStudyList(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+    }
+    
     private void saveGame() {
         //prompt for and get the name of the file to save the game in
         this.console.println("\n\nEnter the file path for the file where the game "

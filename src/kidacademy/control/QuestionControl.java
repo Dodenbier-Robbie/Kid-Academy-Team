@@ -5,6 +5,8 @@
  */
 package kidacademy.control;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.Random;
 import kidacademy.exceptions.QuestionControlException;
 import kidacademy.model.Question;
@@ -48,8 +50,22 @@ public class QuestionControl {
         } catch(QuestionControlException qce){
             return null;
         }
+    } 
+   
+    public static void saveStudyList(String filePath) throws QuestionControlException {
+        
+        try(FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            Question[] questionList = createQuestionList();
+            
+            output.writeObject(questionList); //write the game object out to file
+        }
+        catch(Exception e) {
+            throw new QuestionControlException(e.getMessage());
+        }
+        
     }
-    
     
     public static Question[] createQuestionList(){
     
