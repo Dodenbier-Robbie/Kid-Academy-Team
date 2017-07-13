@@ -6,6 +6,8 @@
 package kidacademy.control;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Objects;
 import kidacademy.KidAcademy;
 import kidacademy.model.Player;
@@ -32,6 +34,13 @@ public class HighScoreControl {
         highScore.add(new HighScore("RudyR", 200));
         highScore.add(new HighScore("Peter", 100));
         highScore.add(new HighScore("Camden", 50));
+        
+        Collections.sort(highScore, new Comparator<HighScore>() {
+            @Override
+            public int compare(HighScore o1, HighScore o2) {
+            return o2.getPlayerScore() - o1.getPlayerScore();
+            }
+        });
         
         return highScore;
     }

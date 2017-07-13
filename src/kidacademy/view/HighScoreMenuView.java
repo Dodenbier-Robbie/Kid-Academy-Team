@@ -6,9 +6,7 @@
 package kidacademy.view;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import kidacademy.control.HighScoreControl;
-import kidacademy.model.HighScore;
 
 /**
  *
