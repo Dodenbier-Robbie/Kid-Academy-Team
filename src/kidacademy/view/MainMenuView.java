@@ -80,6 +80,11 @@ public class MainMenuView extends View {
         //***test code*** temporarily adding in link to question view
 //        QuestionView questionView = new QuestionView();
 //        questionView.display();
+
+        //***test code*** temporarily adding in link to building view
+//        BuildingView buildingView = new BuildingView();
+//        buildingView.display();
+
     }
 
     private void startExistingGame() {
