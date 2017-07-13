@@ -20,24 +20,12 @@ import kidacademy.control.QuestionControl;
 
 public class QuestionView extends View{
     public Question currentQuestion;
-    public QuestionView(){
+    public QuestionView(String classroom){
         
         // Instead of using super, call a setMessage function on View
-        /*super("\n"
-                + "\n-------------------------------------------------------"
-                + "\nSelect an answer by choosing the corresponding number. "                
-                + "\n-------------------------------------------------------"
-                + "\nWhat is 2+2?"
-                + "\n1. 1"
-                + "\n2. 2"
-                + "\n3. 3"
-                + "\n4. 4"
-                + "\nQ - Quit"
-                + "\n-------------------------------------------------------");*/
         
-        //fill in the "calculus" with the room from the room view
         QuestionControl questionControl = new QuestionControl();
-        currentQuestion = questionControl.getQuestion("calculus");
+        currentQuestion = questionControl.getQuestion(classroom);
         
         this.setMessage(
                 "\n"
@@ -45,10 +33,10 @@ public class QuestionView extends View{
                 + "\nSelect an answer by choosing the corresponding number. "                
                 + "\n-------------------------------------------------------"
                 + "\n" + currentQuestion.getQuestion()
-                + "\n1." + currentQuestion.getAnswerPotential1()
-                + "\n2." + currentQuestion.getAnswerPotential2()
-                + "\n3." + currentQuestion.getAnswerPotential3()
-                + "\n4." + currentQuestion.getAnswerPotential4()
+                + "\n1 - " + currentQuestion.getAnswerPotential1()
+                + "\n2 - " + currentQuestion.getAnswerPotential2()
+                + "\n3 - " + currentQuestion.getAnswerPotential3()
+                + "\n4 - " + currentQuestion.getAnswerPotential4()
                 + "\nQ - Quit"
                 + "\n-------------------------------------------------------"
         );
