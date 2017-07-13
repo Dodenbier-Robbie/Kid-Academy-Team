@@ -59,16 +59,19 @@ public class Game implements Serializable{
     }
 
     public void setMap(Map map) {
-        System.out.println("*** setMap function called ***");
+        this.map = map;
     }
 
     public void setPlayer(Player player) {
-        System.out.println("*** setPlayer function called ***");
+        this.player = player;
     }
 
     public Map getMap() {
-        System.out.println("*** getMap function called ***");
         return this.map;
+    }
+    
+    public Player getPlayer() {
+        return this.player;
     }
     
 }
