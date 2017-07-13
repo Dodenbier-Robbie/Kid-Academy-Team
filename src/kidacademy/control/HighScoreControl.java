@@ -7,6 +7,8 @@ package kidacademy.control;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import kidacademy.KidAcademy;
+import kidacademy.model.Player;
 
 /**
  *
@@ -15,12 +17,16 @@ import java.util.Objects;
 public class HighScoreControl {
     
     public ArrayList<HighScore> getHighScores() {
-        
+        Player player = new Player();
+        player = KidAcademy.getPlayer();
+            
+        String playerName = player.getName();
+        int playerScore = player.getBestScore();
         // create an ArrayList of high scores 
         ArrayList<HighScore> highScore = new ArrayList<>();
 
         // adding objects to the ArrayList
-        highScore.add(new HighScore("Robbie", 500));
+        highScore.add(new HighScore(playerName, playerScore));
         highScore.add(new HighScore("Michael", 400));
         highScore.add(new HighScore("Andrew", 300));
         highScore.add(new HighScore("RudyR", 200));

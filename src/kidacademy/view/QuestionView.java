@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package kidacademy.view;
+import kidacademy.KidAcademy;
 import kidacademy.model.Question;
 import kidacademy.control.QuestionControl;
+import kidacademy.model.Player;
 
 /**
  * @author Mann
@@ -61,7 +63,7 @@ public class QuestionView extends View{
                 this.validateAnswer(4);
                 break;
             default: //invalid selection
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -71,12 +73,24 @@ public class QuestionView extends View{
     private void validateAnswer(int answer) {
         Integer answerCorrect = currentQuestion.getAnswerCorrect();
         if(answer == answerCorrect) {
-            System.out.println("\nYou have answered the question successfully."
-                            + "\nYou have been awarded 35 points!!!");
+            
+            Player player = new Player();
+            player = KidAcademy.getPlayer();
+            
+            String playerName = player.getName();
+            int playerScore = player.getBestScore() + 35;
+           
+            this.console.println("\nYou have answered the question successfully."
+                               + "\nYou have been awarded 35 points!!!");
+            
+            this.console.println("\nPlayer Name: " + playerName 
+                               + "\nCurrent Score: " + playerScore);
+            
+            player.setBestScore(playerScore);
         }
 
         else {
-            System.out.println("\nYour answer was incorrect. Try again!");
+            this.console.println("\nYour answer was incorrect. Try again!");
 
         }       
         this.displayLocationView();
